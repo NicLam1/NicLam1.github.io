@@ -1,0 +1,53 @@
+body {
+  background-color: #ffe6f2;
+  background-image: url("colorful-love-hearts-wallpaper-picjumbo-com.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  color: #333;
+}
+
+header {
+  background-color: #ff99cc;
+  color: #fff;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  background-image: url("https://www.google.com/imgres?q=heart%20banner&imgurl=https%3A%2F%2Ft3.ftcdn.net%2Fjpg%2F01%2F87%2F74%2F84%2F360_F_187748493_wm8xPnADj6ileSPk8Fjr3TUA43qYlBiY.jpg&imgrefurl=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dheart%2520banner&docid=uPMqN8ZeACBVuM&tbnid=ZyaQrBPukiN3RM&vet=12ahUKEwj6kLeY8oeIAxWAxzgGHU01BiAQM3oECGsQAA..i&w=1286&h=360&hcb=2&ved=2ahUKEwj6kLeY8oeIAxWAxzgGHU01BiAQM3oECGsQAA"); /* Heart pattern */
+  background-size: cover;
+}
+
+header h1 {
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 3em;
+  position: relative;
+  z-index: 2;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://image.shutterstock.com/image-vector/hearts-seamless-pattern-red-pink-260nw-747089756.jpg");
+  opacity: 0.5;
+  z-index: 1;
+}
+
+h1,
+p {
+  margin-bottom: 20px;
+}
+
+.card-title {
+  color: #ff66b2;
+}
+
+footer {
+  background-color: #ff99cc;
+  color: #fff;
+  margin-top: 30px;
+}
