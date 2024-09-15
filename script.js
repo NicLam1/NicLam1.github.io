@@ -9,10 +9,15 @@ window.addEventListener('scroll',function(){
     let value = window.scrollY;
     stars.style.left = -20 + (value * -0.02) + '%'
     moon.style.top = value * 0.4 + 'px'
+    moon.style.marginLeft = value * 0.1 + 'px'
     behind.style.top = value * 0.2 + 'px'
-    front.style.top = value * 0.1 + 'px'
+    front.style.top = value * 0.05 + 'px'
     text.style.marginRight = value * 0.7 + 'px'
     text.style.marginTop = value * 1 + 'px'
-    btn.style.marginTop = value + 'px'
+    btn.style.marginTop = 30 + value + 'px'
     btn.style.marginLeft = value * 0.7 + 'px'
 })
+
+
+
+

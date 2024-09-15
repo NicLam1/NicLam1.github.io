@@ -13,17 +13,20 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent " id='navBar'>
         <div class="container-fluid pt-3 p-5">
-          <a class="navbar-brand" href="#" style='color: #fff;'>Yeesh</a>
+          <a class="navbar-brand fs-1 fw-bold" href="#" style='color: #43f3cd;'>Yeesh</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse te" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" style='color: aliceblue;'>Home</a>
+                <a class="nav-link active fs-2 fw-bold" aria-current="page" href="#" style='color: aliceblue;'>Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" style='color: #fff;'>Link</a>
+                <a class="nav-link fs-2 fw-bold" href="#" style='color: #fff;'>Socials</a>
+              </li>
+              <li class="nav-item"></li>
+                <a class="nav-link fs-2 fw-bold" href="#" style='color: #fff;'>Contact</a>
               </li>
             </ul>
               
@@ -34,7 +37,7 @@
         <img src="images/bg.png" id='stars' alt="">
         <img src="images/moon.png" id='moon' alt="">
         <img src="images/behind.png" id='behind' alt="">
-        <h2 id='textBanner'>Nicholas</h2>
+        <h2 id='textBanner' class='glow'>Nicholas</h2>
         <a href="#contentPage" ><button id='exploreBtn'>Explore</button></a>
         
         <img src="images/front.png" id='front' alt="">
@@ -44,22 +47,45 @@
       
 <div class="container " id='contentPage'>
   <div class="row mt-2">
-    <div class="col-12 content-left">
+    <div class="col content-left">
       <h1 id='headersH1'>About me</h1>
       <p>I'm Nicholas, I enjoy graphic design, games, making music, and programming. I started graphic design in NS and continued with it ever since. I play the bass, keys, and abit of drums and perform with by band Valencia in SoundFoundry.</p>
     </div>
     <div class="row mt-2">
-    <div class="col-6 content-left">
+    <div class="col-md-6 content-left">
       <h1 id='headersH1'>About me</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus mollitia quis blanditiis consequuntur facere cum id consequatur porro delectus odio autem, beatae repudiandae exercitationem at voluptates eos possimus quibusdam numquam.</p>
     </div>
-    <div class="col-6 content-left">
+    <div class="col-md-6 content-left">
       <h1 id='headersH1'>About me</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus mollitia quis blanditiis consequuntur facere cum id consequatur porro delectus odio autem, beatae repudiandae exercitationem at voluptates eos possimus quibusdam numquam.</p>
     </div>
-    <div class="row mt-2">
-      <img src="images/Blindside_Archive_Red_Gala-695.jpg" class='img-fluid' alt="">
+    <div class="row content-left">
+      <h2 class='fw-bold text-light' style='font-size: 3em;'>Gallery</h2>
+      <p>Pictures of my performances with my band Valencia</p>
     </div>
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/Blindside_Archive_Red_Gala-695.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/DSC09760.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/Group-183.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
     </div>
     </div>
   </div>
