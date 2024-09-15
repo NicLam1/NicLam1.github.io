@@ -10,6 +10,7 @@ window.addEventListener('scroll',function(){
     stars.style.left = -20 + (value * -0.02) + '%'
     moon.style.top = value * 0.4 + 'px'
     moon.style.marginLeft = value * 0.1 + 'px'
+    moon.style.rotate = value *0.02+ 'deg'
     behind.style.top = value * 0.2 + 'px'
     front.style.top = value * 0.05 + 'px'
     text.style.marginRight = value * 0.7 + 'px'
