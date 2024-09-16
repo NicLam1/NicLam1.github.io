@@ -49,7 +49,16 @@ p {
 
 #headersH1 {
   color: #1d1d1d;
-  font-size: 4em;
+  
+  
+}
+
+@media (width>425px) {
+  #headersH1 {
+    color: #1d1d1d;
+    font-size: 4em;
+  }
+
 }
 
 .content-left p {
@@ -147,6 +156,15 @@ section img {
   
 }
 
+.navbar-toggler-icon {
+  
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(67, 243, 205, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+.navbar-toggler{
+  border-color: #43f3cd !important;
+}
+
+
 .nav-link:not(:hover)::before{
   content: '';
   position: absolute;
@@ -175,10 +193,11 @@ section img {
 }
 
 #exploreBtn {
+  position: relative;
   text-decoration: none;
   font-weight: 500;
   display: inline-block;
-  padding: 0.4em 1em;
+  padding: 1vh 4vh;
   margin-top: 5%;
   border-radius: 50px;
   border: 4px white solid;
@@ -186,10 +205,61 @@ section img {
   color: #ffffff;
   font-size: 1.5em;
   z-index: 10;
-  transform: translateY(5.5em);
+  transform: translateY(14vh);
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
     0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
 }
+#exploreBtnLabel{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  
+}
+#exploreBtnLabel:hover{
+  cursor: pointer;
+}
+#exploreBtn:hover::before{
+  transition: all 500ms;
+}
+#exploreBtn:hover::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  z-index: -1;
+  background-image: linear-gradient(to top, #02eeceda,#02eece6e);
+  border-radius: 50px;
+  animation: fadeInOp 0.5s;
+  cursor: pointer;
+}
+
+#exploreBtn:not(:hover)::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  z-index: -1;
+  background-image: linear-gradient(to top, #02eeceda,#02eece6e);
+  border-radius: 50px;
+  opacity: 0;
+  animation: fadeOutOp 0.5s;
+  
+}
+
+@keyframes fadeInOp {
+  0% {opacity: 0%;}
+  100% {opacity: 100%;}
+}
+
+@keyframes fadeOutOp {
+  0% {opacity: 100%;}
+  100% {opacity: 0%;}
+}
+
 
 .glow {
   color: #ffffff;

@@ -18,3 +18,35 @@ window.addEventListener("scroll", function () {
   btn.style.marginTop = 5 + value + "%";
   btn.style.marginLeft = value * 0.7 + "px";
 });
+
+
+
+
+function draw() {
+
+  var x = mouse.x,
+      y = mouse.y;
+      
+  dots.forEach(function(dot, index, dots) {
+    var nextDot = dots[index + 1] || dots[0];
+    
+    dot.x = x;
+    dot.y = y;
+    dot.draw();
+    x += (nextDot.x - dot.x) * .6;
+    y += (nextDot.y - dot.y) * .6;
+
+  });
+}
+
+addEventListener("mousemove", function(event) {
+  mouse.x = event.pageX;
+  mouse.y = event.pageY;
+});
+
+function animate() {
+  draw();
+  requestAnimationFrame(animate);
+}
+
+animate();
