@@ -119,6 +119,61 @@ section img {
   margin-bottom: 0;
 }
 
+.nav-link{
+  position: relative !important;
+  width: max-content !important;
+  
+  
+  z-index: 999999999;
+}
+.nav-link::before{
+  transition: all 100ms;
+
+}
+.nav-link:hover::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 90%;
+  width: 100%;
+  background-image: linear-gradient(to top, #43f3cd3b 20%,transparent);
+  border-bottom: #43f3cd 2px solid;
+
+  animation: fadeIn 0.5s;
+ 
+  
+  /* background-color: white; */
+  
+}
+
+.nav-link:not(:hover)::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 90%;
+  width: 100%;
+  background-image: linear-gradient(to top, #43f3cd3b 20%,transparent);
+  border-bottom: #43f3cd 2px solid;
+  z-index: 1000000;
+  opacity: 0;
+  animation: fadeOut 0.5s;
+  
+  /* background-color: white; */
+  
+}
+
+@keyframes fadeIn {
+  0% {height: 0%;}
+  100% {height: 90%;}
+}
+
+@keyframes fadeOut {
+  0% {height: 90%;}
+  100% {height: 0%;}
+}
+
 #exploreBtn {
   text-decoration: none;
   font-weight: 500;
