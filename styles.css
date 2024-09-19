@@ -49,8 +49,6 @@ p {
 
 #headersH1 {
   color: #1d1d1d;
-  
-  
 }
 
 @media (width>425px) {
@@ -58,7 +56,6 @@ p {
     color: #1d1d1d;
     font-size: 4em;
   }
-
 }
 
 .content-left p {
@@ -74,8 +71,7 @@ p {
   border-color: rgb(46, 46, 46) !important;
   opacity: 100%;
 }
-#skillType{
-  
+#skillType {
 }
 section::before {
   content: "asd";
@@ -129,68 +125,69 @@ section img {
   cursor: default;
 }
 
-.nav-link{
+.nav-link {
   position: relative !important;
   width: max-content !important;
-  
-  
+
   z-index: 999999999;
 }
-.nav-link::before{
+.nav-link::before {
   transition: all 100ms;
-
 }
-.nav-link:hover::before{
-  content: '';
+.nav-link:hover::before {
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   height: 90%;
   width: 100%;
-  background-image: linear-gradient(to top, #43f3cd3b 20%,transparent);
+  background-image: linear-gradient(to top, #43f3cd3b 20%, transparent);
   border-bottom: #43f3cd 2px solid;
 
   animation: fadeIn 0.5s;
- 
-  
+
   /* background-color: white; */
-  
 }
 
 .navbar-toggler-icon {
-  
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(67, 243, 205, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
-.navbar-toggler{
+.navbar-toggler {
   border-color: #43f3cd !important;
 }
 
-
-.nav-link:not(:hover)::before{
-  content: '';
+.nav-link:not(:hover)::before {
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   height: 90%;
   width: 100%;
-  background-image: linear-gradient(to top, #43f3cd3b 20%,transparent);
+  background-image: linear-gradient(to top, #43f3cd3b 20%, transparent);
   border-bottom: #43f3cd 2px solid;
   z-index: 1000000;
   opacity: 0;
   animation: fadeOut 0.5s;
-  
+
   /* background-color: white; */
-  
 }
 
 @keyframes fadeIn {
-  0% {height: 0%;}
-  100% {height: 90%;}
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 90%;
+  }
 }
 
 @keyframes fadeOut {
-  0% {height: 90%;}
-  100% {height: 0%;}
+  0% {
+    height: 90%;
+  }
+  100% {
+    height: 0%;
+  }
 }
 
 #exploreBtn {
@@ -210,57 +207,62 @@ section img {
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
     0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
 }
-#exploreBtnLabel{
+#exploreBtnLabel {
   width: 100%;
   height: 100%;
   position: relative;
-  
 }
-#exploreBtnLabel:hover{
+#exploreBtnLabel:hover {
   cursor: pointer;
 }
-#exploreBtn:hover::before{
+#exploreBtn:hover::before {
   transition: all 500ms;
 }
-#exploreBtn:hover::before{
-  content: '';
+#exploreBtn:hover::before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   z-index: -1;
-  background-image: linear-gradient(to top, #02eeceda,#02eece6e);
+  background-image: linear-gradient(to top, #02eeceda, #02eece6e);
   border-radius: 50px;
   animation: fadeInOp 0.5s;
   cursor: pointer;
 }
 
-#exploreBtn:not(:hover)::before{
-  content: '';
+#exploreBtn:not(:hover)::before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   z-index: -1;
-  background-image: linear-gradient(to top, #02eeceda,#02eece6e);
+  background-image: linear-gradient(to top, #02eeceda, #02eece6e);
   border-radius: 50px;
   opacity: 0;
   animation: fadeOutOp 0.5s;
-  
 }
 
 @keyframes fadeInOp {
-  0% {opacity: 0%;}
-  100% {opacity: 100%;}
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 @keyframes fadeOutOp {
-  0% {opacity: 100%;}
-  100% {opacity: 0%;}
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
 }
-
 
 .glow {
   color: #ffffff;
@@ -292,12 +294,27 @@ section img {
   object-fit: cover;
 }
 
-.darkBG{
+.darkBG {
   background-color: rgb(19, 19, 19);
 }
 
-.footerContainer{
+.footerContainer {
   background-color: #1c0522;
+}
+
+ion-icon {
+  color: white;
+  margin: 0 0 0 10px;
+  position: relative;
+  top: 5px;
+}
+
+#contacts h2 {
+  color: white;
+}
+
+#teleIcon {
+  --ionicon-stroke-width: 16px;
 }
 
 @-webkit-keyframes glow {
@@ -312,94 +329,110 @@ section img {
 }
 
 /* form */
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
   color: #aca49c;
   font-size: 0.875em;
 }
 
-input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
   color: #bbb5af;
 }
 
-input::-moz-placeholder, textarea::-moz-placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
   color: #aca49c;
   font-size: 0.875em;
 }
 
-input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
   color: #bbb5af;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: #aca49c;
   font-size: 0.875em;
 }
 
-input:focus::placeholder, textarea::focus:placeholder {
+input:focus::placeholder,
+textarea::focus:placeholder {
   color: #bbb5af;
 }
 
-input::-ms-placeholder, textarea::-ms-placeholder {
+input::-ms-placeholder,
+textarea::-ms-placeholder {
   color: #aca49c;
   font-size: 0.875em;
 }
 
-input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
+input:focus::-ms-placeholder,
+textarea:focus::-ms-placeholder {
   color: #bbb5af;
 }
 
 /* on hover placeholder */
 
-input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+input:hover::-webkit-input-placeholder,
+textarea:hover::-webkit-input-placeholder {
   color: #e2dedb;
   font-size: 0.875em;
 }
 
-input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
+input:hover:focus::-webkit-input-placeholder,
+textarea:hover:focus::-webkit-input-placeholder {
   color: #cbc6c1;
 }
 
-input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
+input:hover::-moz-placeholder,
+textarea:hover::-moz-placeholder {
   color: #e2dedb;
   font-size: 0.875em;
 }
 
-input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
+input:hover:focus::-moz-placeholder,
+textarea:hover:focus::-moz-placeholder {
   color: #cbc6c1;
 }
 
-input:hover::placeholder, textarea:hover::placeholder {
+input:hover::placeholder,
+textarea:hover::placeholder {
   color: #e2dedb;
   font-size: 0.875em;
 }
 
-input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+input:hover:focus::placeholder,
+textarea:hover:focus::placeholder {
   color: #cbc6c1;
 }
 
-input:hover::placeholder, textarea:hover::placeholder {
+input:hover::placeholder,
+textarea:hover::placeholder {
   color: #e2dedb;
   font-size: 0.875em;
 }
 
-input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
+input:hover:focus::-ms-placeholder,
+textarea:hover::focus:-ms-placeholder {
   color: #cbc6c1;
 }
 
 input {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 0.875em;
   width: 100%;
   height: 50px;
   padding: 0px 15px 0px 15px;
-  
+
   background: transparent;
   outline: none;
   color: #43f3cd;
-  
+
   border: solid 1px #43f3cd;
   border-bottom: none;
-  
+
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -413,20 +446,20 @@ input:hover {
 
 textarea {
   width: 100%;
-  
+
   height: 110px;
   max-height: 110px;
   padding: 15px;
-  
+
   background: transparent;
   outline: none;
-  
+
   color: #43f3cd;
-  
+
   font-size: 0.875em;
-  
+
   border: solid 1px #43f3cd;
-  
+
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -440,26 +473,23 @@ textarea:hover {
 
 #submit {
   width: 100%;
-  
+
   padding: 0;
   margin: 1em 0px 0px 0px;
-  
-  
+
   font-size: 0.875em;
   color: #43f3cd;
-  
-  outline:none;
+
+  outline: none;
   cursor: pointer;
-  
+
   border: solid 1px #43f3cd;
- 
 }
 
 #submit:hover {
   color: #e2dedb;
 }
 
-
-.borderRow{
+.borderRow {
   border: 4px #43f3cd solid;
 }
