@@ -1,0 +1,146 @@
+import React, { useEffect } from "react";
+import "./App.css";
+import Nav from "./Nav";
+import Content from "./Content";
+
+function App() {
+  useEffect(() => {
+    const canvas = document.getElementById("waveCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const scale = window.devicePixelRatio;
+    canvas.width = 800 * scale;
+    canvas.height = 400 * scale;
+    ctx.scale(scale, scale);
+
+    let lines = [];
+    const lineCount = 4;
+    const waveHeight = 50;
+    const waveWidth = 1000;
+    const speed = 0.003;
+    let animationProgress = 1;
+
+    for (let i = 0; i < lineCount; i++) {
+      lines.push({
+        frequency: 0.015 + i * 0.005,
+        amplitude: waveHeight - i * 2.5,
+        phase: (i * Math.PI) / 200,
+        verticalOffset: i * 70,
+      });
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      animationProgress += speed;
+
+      lines.forEach((line, index) => {
+        ctx.beginPath();
+        ctx.lineWidth = 0.5;
+        ctx.setLineDash(animationProgress < 1 ? [8, 4] : []);
+        ctx.strokeStyle = `rgba(255, 255, 255, 0.3)`;
+
+        for (let x = 0; x <= waveWidth; x += 2) {
+          const yOffset = line.verticalOffset * (x / waveWidth);
+          const y =
+            canvas.height / 2 / scale +
+            yOffset +
+            Math.sin(x * line.frequency + animationProgress + line.phase) *
+              line.amplitude;
+          x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        }
+
+        ctx.stroke();
+
+        const dotX = waveWidth * ((animationProgress + line.phase) % 1);
+        const yOffset = line.verticalOffset * (dotX / waveWidth);
+        const dotY =
+          canvas.height / 2 / scale +
+          yOffset +
+          Math.sin(dotX * line.frequency + animationProgress + line.phase) *
+            line.amplitude;
+
+        ctx.beginPath();
+        ctx.arc(dotX, dotY, 1, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0, 0, 0, 100)`;
+        ctx.fill();
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  }, []);
+
+  const handleScrollClick = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <div>
+      <Nav />
+      <div className="App">
+        <canvas id="waveCanvas" width="800" height="400"></canvas>
+        <header className="App-header">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12 text-center">
+                <h1 id="name">Nicholas</h1>
+                <p className="d-md-block d-none job-names">
+                  Software Developer | Web Developer | Graphic Designer
+                </p>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div className="additional-info-container">
+          <div className="row">
+            <div className="col-lg-2 text-center align-content-center">
+              <p className="get-connected">Get Connected</p>
+              <div className="social-icons">
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-8">
+              <p className="additional-info">
+                Information systems student specialising in product development.
+                Skills with web development, graphic design, and marketing.
+              </p>
+            </div>
+            <div className="col-lg-2 align-content-center button-container">
+              <button className="contact-button">Contact Me</button>
+            </div>
+          </div>
+        </div>
+        <div className="scroll-arrow" onClick={handleScrollClick}>
+          <span className="arrow">↓</span>
+        </div>
+      </div>
+      <Content />
+    </div>
+  );
+}
+
+export default App;

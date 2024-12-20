@@ -1,0 +1,43 @@
+:root {
+  --off-white: #f8f9fa;
+  --dark-grey: #151515;
+  --light-grey: rgba(248, 249, 250, 0.6);
+}
+
+.App-content {
+  background-color: var(--dark-grey);
+  padding: 40px 0;
+}
+
+.content-section {
+  background-color: var(--dark-grey);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.content-section:hover {
+  transform: translateY(-10px);
+}
+
+.icon {
+  color: var(--off-white);
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: var(--off-white);
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
