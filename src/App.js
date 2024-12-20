@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./App.css";
 import Nav from "./Nav";
 import Content from "./Content";
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 function App() {
   useEffect(() => {
@@ -105,21 +106,21 @@ function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-linkedin"></i>
+                  <FaLinkedin />
                 </a>
                 <a
                   href="https://www.instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-instagram"></i>
+                  <FaInstagram />
                 </a>
                 <a
                   href="https://github.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-github"></i>
+                  <FaGithub />
                 </a>
               </div>
             </div>
