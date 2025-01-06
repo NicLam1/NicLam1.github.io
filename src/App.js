@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import "./App.css";
 import Nav from "./Nav";
 import Content from "./Content";
-import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from "react-icons/fa";
+import Projects from './Projects';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function App() {
   useEffect(() => {
@@ -73,16 +75,17 @@ function App() {
   }, []);
 
   const handleScrollClick = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth",
+    scroll.scrollTo(window.innerHeight, {
+      duration: 800,
+      smooth: "easeInOutQuad",
     });
   };
+  
 
   return (
     <div>
       <Nav />
-      <div className="App">
+      <div className="App" id="home">
         <canvas id="waveCanvas" width="800" height="400"></canvas>
         <header className="App-header">
           <div className="container">
@@ -102,21 +105,21 @@ function App() {
               <p className="get-connected">Get Connected</p>
               <div className="social-icons">
                 <a
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/in/nicholas-lam-1950b9123/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaLinkedin />
                 </a>
                 <a
-                  href="https://www.instagram.com"
+                  href="mailto:nicholaslamzt@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaInstagram />
+                  <FaEnvelope />
                 </a>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/NicLam1"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -131,7 +134,9 @@ function App() {
               </p>
             </div>
             <div className="col-lg-2 align-content-center button-container">
-              <button className="contact-button">Contact Me</button>
+              <a href="mailto:nicholaslamzt@gmail.com" className="contact-button" style={{textDecoration: "none"}}>
+                Contact Me
+              </a>
             </div>
           </div>
         </div>
@@ -139,7 +144,9 @@ function App() {
           <span className="arrow">↓</span>
         </div>
       </div>
-      <Content />
+
+      <Projects id="projects"/>
+
     </div>
   );
 }

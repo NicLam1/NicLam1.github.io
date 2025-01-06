@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.project-card {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateX(8px);
+}
+
+.stat-card {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .stat-card {
+  transform: translateY(-4px);
+}

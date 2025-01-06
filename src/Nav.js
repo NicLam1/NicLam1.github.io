@@ -7,6 +7,7 @@ import {
   faProjectDiagram,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-scroll";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,32 +25,30 @@ function Nav() {
         <div className={`nk-navbar-collapse ${isOpen ? "open" : ""}`}>
           <ul className="nk-navbar-list">
             <li className="nk-navbar-item">
-              <a href="#home" className="nk-navbar-link">
-                <FontAwesomeIcon icon={faHome} style={{ marginRight: "0px" }} />
+              <Link
+                to="home"
+                className="nk-navbar-link"
+                smooth={true}
+                duration={800}
+              >
+                <FontAwesomeIcon icon={faHome} />
                 <span className="nk-navbar-link-text">Home</span>
-              </a>
+              </Link>
             </li>
             <li className="nk-navbar-item">
-              <a href="#about" className="nk-navbar-link">
-                <FontAwesomeIcon icon={faUser} style={{ marginRight: "0px" }} />
-                <span className="nk-navbar-link-text">About</span>
-              </a>
-            </li>
-            <li className="nk-navbar-item">
-              <a href="#projects" className="nk-navbar-link">
-                <FontAwesomeIcon
-                  icon={faProjectDiagram}
-                  style={{ marginRight: "0px" }}
-                />
+              <Link
+                to="projects"
+                className="nk-navbar-link"
+                smooth={true}
+                duration={800}
+              >
+                <FontAwesomeIcon icon={faProjectDiagram} />
                 <span className="nk-navbar-link-text">Projects</span>
-              </a>
+              </Link>
             </li>
             <li className="nk-navbar-item">
-              <a href="#contact" className="nk-navbar-link">
-                <FontAwesomeIcon
-                  icon={faEnvelope}
-                  style={{ marginRight: "0px" }}
-                />
+              <a href="mailto:nicholaslamzt@gmail.com" className="nk-navbar-link">
+                <FontAwesomeIcon icon={faEnvelope} />
                 <span className="nk-navbar-link-text">Contact</span>
               </a>
             </li>
