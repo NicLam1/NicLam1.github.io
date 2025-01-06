@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c1fa211a.css",
+    "main.js": "/static/js/main.9416937d.js",
+    "static/js/488.7a876c9d.chunk.js": "/static/js/488.7a876c9d.chunk.js",
+    "static/media/ANTIONY POSTER.png": "/static/media/ANTIONY POSTER.69e2381a70632419f3fe.png",
+    "static/media/HIGH RISK. POSTER.png": "/static/media/HIGH RISK. POSTER.446e329d85b96e0b3412.png",
+    "static/media/LFN.png": "/static/media/LFN.03696ae64e7ce0aae868.png",
+    "static/media/WILDCARD POSTER.png": "/static/media/WILDCARD POSTER.37e4fd7ce8265c0f8a98.png",
+    "static/media/downtune.png": "/static/media/downtune.8f23a0e1e3af1f0bdb31.png",
+    "static/media/RedGala.jpg": "/static/media/RedGala.cdae08c47d0e0d024b2e.jpg",
+    "index.html": "/index.html",
+    "main.c1fa211a.css.map": "/static/css/main.c1fa211a.css.map",
+    "main.9416937d.js.map": "/static/js/main.9416937d.js.map",
+    "488.7a876c9d.chunk.js.map": "/static/js/488.7a876c9d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1fa211a.css",
+    "static/js/main.9416937d.js"
+  ]
+}
