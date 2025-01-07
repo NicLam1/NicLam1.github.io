@@ -72,7 +72,7 @@
 .project-categories {
     display: flex;
     gap: 0.5rem;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .category-tag {
@@ -122,7 +122,7 @@
     content: '→';
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 1.5rem;
     font-size: 1.5rem;
     color: white;
     opacity: 0.8;

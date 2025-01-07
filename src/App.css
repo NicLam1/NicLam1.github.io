@@ -186,13 +186,19 @@ canvas {
 
 .additional-info {
   /* margin-top: 5em; */
-  font-size: 2em;
+  font-size: 2vw;
   color: var(--off-white);
   text-align: left;
   font-weight: 700;
   font-family: "Lexend", sans-serif;
   /* width: 90%; */
   margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .additional-info {
+    font-size: 3vw;
+  }
 }
 
 .additional-info-container {
@@ -224,6 +230,13 @@ canvas {
   transform: translateY(-2px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 0 0 10px #8a2be2, 0 0 20px #8a2be2,
     0 0 30px #1e90ff, 0 0 40px #1e90ff;
+}
+
+@media (max-width: 768px) {
+  .contact-button {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
 }
 
 .button-container {
