@@ -59,13 +59,7 @@ function Projects() {
           </div>
         </div>
       </div>
-      <Link
-        to="someSection"
-        smooth={true}
-        duration={800}
-      >
-        Scroll to Section
-      </Link>
+    
     </div>
   );
 }

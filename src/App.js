@@ -4,6 +4,7 @@ import Nav from "./Nav";
 import Content from "./Content";
 import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from "react-icons/fa";
 import Projects from './Projects';
+import Resume from './Resume';
 import { Link, animateScroll as scroll } from "react-scroll";
 
 function App() {
@@ -146,6 +147,7 @@ function App() {
       </div>
 
       <Projects id="projects"/>
+      <Resume id="resume"/>
 
     </div>
   );

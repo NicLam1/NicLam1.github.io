@@ -47,11 +47,23 @@ function Nav() {
               </Link>
             </li>
             <li className="nk-navbar-item">
+              <Link
+                to="resume"
+                className="nk-navbar-link"
+                smooth={true}
+                duration={800}
+              >
+                <FontAwesomeIcon icon={faUser} />
+                <span className="nk-navbar-link-text">Resume</span>
+              </Link>
+            </li>
+            <li className="nk-navbar-item">
               <a href="mailto:nicholaslamzt@gmail.com" className="nk-navbar-link">
                 <FontAwesomeIcon icon={faEnvelope} />
                 <span className="nk-navbar-link-text">Contact</span>
               </a>
             </li>
+            
           </ul>
         </div>
       </div>

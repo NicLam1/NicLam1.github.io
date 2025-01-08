@@ -99,6 +99,10 @@
     padding: 0;
   }
 
+  .nk-navbar-link svg {
+    margin-right: 0;
+  }
+
   .nk-navbar-container {
     position: fixed;
     top: 0px;
@@ -106,7 +110,7 @@
     width: 45px;
     flex-direction: column;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.9);
+    /* background: rgba(255, 255, 255, 0.9); */
     border-radius: 50%;
     overflow: hidden;
   }
@@ -117,10 +121,13 @@
     align-items: center;
     background: transparent;
     padding: 0;
+    box-shadow: none;
+    border: none;
   }
 
   .nk-navbar-container[aria-expanded="true"] {
     border-radius: 25px;
+    background: rgba(39, 39, 39, 0.9);
   }
 
   .nk-navbar-collapse {
