@@ -6,12 +6,12 @@ const projects = [
     year: 2024,
     title: "Downtune - Web development project",
     images: importAll(require.context('./images/downtune', false, /\.(png|jpe?g|svg)$/)),
-    categories: ["Mobile", "Web", "Website"],
+    categories: ["Mobile", "Web"],
     link: "https://downtune.netlify.app",
     stats: [
       {
         value: "Description",
-        description: "Downtune is a web development project that I worked on with a team of 5 people. It is a platform that allows users to search and contact local artists for gigs and events. Grade: A+"
+        description: "Downtune is a web development project that I worked on with a team of 5 people. It is a platform that allows users to search and contact local artists for gigs and events."
       },
       {
         value: "Frameworks",
@@ -24,7 +24,7 @@ const projects = [
     year: "Jan 2024 - Dec 2024",
     title: "Marketing Director - SMU SoundFoundry",
     images: importAll(require.context('./images/sf', false, /\.(png|jpe?g|svg)$/)),
-    categories: ["Mobile", "Web", "Documentation"],
+    categories: ["Marketing", "Graphic Design", "Social Media"],
     link: "",
     stats: [
       {
@@ -34,6 +34,42 @@ const projects = [
       {
         value: "Skills",
         description: "Photoshop, Illustrator, Premiere Pro, Blender"
+      }
+    ]
+  },
+  {
+    id: 3,
+    year: "Jan 2025 - April 2025",
+    title: "Dungeons End - Docker Project",
+    images: importAll(require.context('./images/dungeons', false, /\.(png|jpe?g|svg)$/)),
+    categories: ["Docker", "Web", "Microservice architecture"],
+    link: "https://github.com/NicLam1/Dungeons_End",
+    stats: [
+      {
+        value: "Description",
+        description: "Created a text-based dungeon crawler game using Docker containers, adhearing to microservice architecture principles. Included inventory management, character stats, and combat mechanics."
+      },
+      {
+        value: "Skills",
+        description: "Docker, Python, HTML, CSS, JavaScript"
+      }
+    ]
+  },
+  {
+    id: 4,
+    year: "Jan 2025 - April 2025",
+    title: "Passport photo maker - Java Project",
+    images: importAll(require.context('./images/passport', false, /\.(png|jpe?g|svg)$/)),
+    categories: ["Java", "Spring Boot"],
+    link: "https://github.com/NicLam1/OOPTest",
+    stats: [
+      {
+        value: "Description",
+        description: "Created a passport photo maker using Java and Spring Boot. Allows the user to upload a photo, automatically crops and removes the background adhearing to passport photo requirements."
+      },
+      {
+        value: "Skills",
+        description: "Java, Spring Boot, Maven, U2Onxx, OpenCV"
       }
     ]
   },

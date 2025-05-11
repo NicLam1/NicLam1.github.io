@@ -94,7 +94,7 @@ function App() {
               <div className="col-lg-12 text-center">
                 <h1 id="name">Nicholas</h1>
                 <p className="d-md-block d-none job-names">
-                  Software Developer | Web Developer | Graphic Designer
+                  Full Stack Developer | Graphic Designer
                 </p>
               </div>
             </div>
@@ -131,7 +131,7 @@ function App() {
             <div className="col-lg-8">
               <p className="additional-info">
                 Information systems student specialising in product development.
-                Skills with web development, graphic design, and marketing.
+                Skills with Full Stack Development, Graphic Design, and Marketing.
               </p>
             </div>
             <div className="col-lg-2 align-content-center button-container">
