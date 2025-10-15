@@ -21,24 +21,6 @@ const projects = [
   },
   {
     id: 2,
-    year: "Jan 2024 - Dec 2024",
-    title: "Marketing Director - SMU SoundFoundry",
-    images: importAll(require.context('./images/sf', false, /\.(png|jpe?g|svg)$/)),
-    categories: ["Marketing", "Graphic Design", "Social Media"],
-    link: "",
-    stats: [
-      {
-        value: "Description",
-        description: "Led a team of 3 in developing and executing marketing strategies across Instagram, TikTok, and email platforms to promote club events and initiatives. 67% increase in Instagram followers (1200-2000) over one year."
-      },
-      {
-        value: "Skills",
-        description: "Photoshop, Illustrator, Premiere Pro, Blender"
-      }
-    ]
-  },
-  {
-    id: 3,
     year: "Jan 2025 - April 2025",
     title: "Dungeons End - Docker Project",
     images: importAll(require.context('./images/dungeons', false, /\.(png|jpe?g|svg)$/)),
@@ -56,7 +38,7 @@ const projects = [
     ]
   },
   {
-    id: 4,
+    id: 3,
     year: "Jan 2025 - April 2025",
     title: "Passport photo maker - Java Project",
     images: importAll(require.context('./images/passport', false, /\.(png|jpe?g|svg)$/)),
