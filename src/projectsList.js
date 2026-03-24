@@ -5,55 +5,84 @@ const projects = [
     id: 1,
     year: 2024,
     title: "Downtune - Web development project",
-    images: importAll(require.context('./images/downtune', false, /\.(png|jpe?g|svg)$/)),
+    images: importAll(
+      require.context("./images/downtune", false, /\.(png|jpe?g|svg)$/)
+    ),
     categories: ["Mobile", "Web"],
     link: "https://downtune.netlify.app",
     stats: [
       {
         value: "Description",
-        description: "Downtune is a web development project that I worked on with a team of 5 people. It is a platform that allows users to search and contact local artists for gigs and events."
+        description:
+          "Downtune is a web development project that I worked on with a team of 5 people. It is a platform that allows users to search and contact local artists for gigs and events.",
       },
       {
         value: "Frameworks",
-        description: "Vue.js, Bootstrap, Node.js, Firebase, Netlify"
-      }
-    ]
+        description: "Vue.js, Bootstrap, Node.js, Firebase, Netlify",
+      },
+    ],
   },
   {
     id: 2,
     year: "Jan 2025 - April 2025",
     title: "Dungeons End - Docker Project",
-    images: importAll(require.context('./images/dungeons', false, /\.(png|jpe?g|svg)$/)),
+    images: importAll(
+      require.context("./images/dungeons", false, /\.(png|jpe?g|svg)$/)
+    ),
     categories: ["Docker", "Web", "Microservice architecture"],
     link: "https://github.com/NicLam1/Dungeons_End",
     stats: [
       {
         value: "Description",
-        description: "Created a text-based dungeon crawler game using Docker containers, adhearing to microservice architecture principles. Included inventory management, character stats, and combat mechanics."
+        description:
+          "Created a text-based dungeon crawler game using Docker containers, adhearing to microservice architecture principles. Included inventory management, character stats, and combat mechanics.",
       },
       {
         value: "Skills",
-        description: "Docker, Python, HTML, CSS, JavaScript"
-      }
-    ]
+        description: "Docker, Python, HTML, CSS, JavaScript",
+      },
+    ],
   },
   {
     id: 3,
     year: "Jan 2025 - April 2025",
     title: "Passport photo maker - Java Project",
-    images: importAll(require.context('./images/passport', false, /\.(png|jpe?g|svg)$/)),
+    images: importAll(
+      require.context("./images/passport", false, /\.(png|jpe?g|svg)$/)
+    ),
     categories: ["Java", "Spring Boot"],
     link: "https://github.com/NicLam1/OOPTest",
     stats: [
       {
         value: "Description",
-        description: "Created a passport photo maker using Java and Spring Boot. Allows the user to upload a photo, automatically crops and removes the background adhearing to passport photo requirements."
+        description:
+          "Created a passport photo maker using Java and Spring Boot. Allows the user to upload a photo, automatically crops and removes the background adhearing to passport photo requirements.",
       },
       {
         value: "Skills",
-        description: "Java, Spring Boot, Maven, U2Onxx, OpenCV"
-      }
-    ]
+        description: "Java, Spring Boot, Maven, U2Onxx, OpenCV",
+      },
+    ],
+  },
+  {
+    id: 4,
+    year: "August 2025 - September 2025",
+    title: "Donkiboard",
+    images: importAll(
+      require.context("./images/donkiboard", false, /\.(png|jpe?g|svg)$/)
+    ),
+    categories: ["Project"],
+    stats: [
+      {
+        value: "Description",
+        description:
+          "Working task dashboard which allows users to create, view, assign, and update tasks. Comes with user authentication and role based access to different tasks and features",
+      },
+      {
+        value: "Skills",
+        description: "Typescript, React, Node.js, Express, Supabase",
+      },
+    ],
   },
   // {
   //   id: 3,
@@ -115,24 +144,24 @@ const projects = [
   // }
 ];
 
-export default projects; 
+export default projects;
 
 function updateCarouselBackground(imageUrl) {
-    const carouselBackground = document.querySelector('.carousel-background');
-    if (carouselBackground) {
-        carouselBackground.style.backgroundImage = `url(${imageUrl})`;
-    }
+  const carouselBackground = document.querySelector(".carousel-background");
+  if (carouselBackground) {
+    carouselBackground.style.backgroundImage = `url(${imageUrl})`;
+  }
 }
 
 function showImage(index) {
-    const images = document.querySelectorAll('.carousel-image');
-    images.forEach((img, i) => {
-        img.style.display = i === index ? 'block' : 'none';
-        if (i === index) {
-            updateCarouselBackground(img.src);
-        }
-    });
+  const images = document.querySelectorAll(".carousel-image");
+  images.forEach((img, i) => {
+    img.style.display = i === index ? "block" : "none";
+    if (i === index) {
+      updateCarouselBackground(img.src);
+    }
+  });
 }
 
 // Call showImage with the initial index to set the first image and background
-showImage(0); 
+showImage(0);
