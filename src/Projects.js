@@ -3,6 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import projects from './projectsList.js';
 import './projects.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Link } from "react-scroll";
 
 function Projects() {
   const handleCardClick = (link) => {

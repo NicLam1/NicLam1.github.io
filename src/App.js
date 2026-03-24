@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import Nav from "./Nav";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import Content from "./Content";
+import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from "react-icons/fa";
 import Projects from './Projects';
 import Resume from './Resume';
 import GraphicDesign from './GraphicDesign';
-import { animateScroll as scroll } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function App() {
   useEffect(() => {
