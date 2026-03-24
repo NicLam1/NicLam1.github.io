@@ -3,7 +3,6 @@ import { Carousel } from 'react-responsive-carousel';
 import projects from './projectsList.js';
 import './projects.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Link } from "react-scroll";
 
 function Projects() {
   const handleCardClick = (link) => {
@@ -13,7 +12,7 @@ function Projects() {
   };
 
   return (
-    <div id="projects" className="container-fluid">
+    <div id="projects" className="container-fluid section-gutter">
       <div className="row">
         <div className="">
           <h2 className="section-title">Projects</h2>
@@ -45,7 +44,7 @@ function Projects() {
                     </div>
                   </div>
                   <div className="project-carousel">
-                    <Carousel showThumbs={false} dynamicHeight={true} infiniteLoop={true} autoPlay={true}>
+                    <Carousel showThumbs={false} dynamicHeight={false} infiniteLoop={true} autoPlay={true}>
                       {project.images.map((image, index) => (
                         <div key={index} className="carousel-slide">
                           <img src={image} alt={`Project ${index}`} className="carousel-image" />

@@ -32,7 +32,7 @@ function GraphicDesign() {
   const closeModal = () => setModalSrc(null);
 
   return (
-    <div id="graphic-design" className="container-fluid gd-section">
+    <div id="graphic-design" className="container-fluid section-gutter gd-section">
       <div className="row">
         <div className="col-12">
           <h2 className="section-title">Graphic Design</h2>

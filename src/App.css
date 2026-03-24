@@ -274,3 +274,16 @@ canvas {
   font-weight: bold;
   color: var(--dark-grey);
 }
+
+/* Keep horizontal gutters even when Bootstrap container rules change. */
+.section-gutter {
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+}
+
+@media (max-width: 768px) {
+  .section-gutter {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
